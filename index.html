@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js SPA</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <style>
+    body { font-family: Arial; text-align: center; background: #f4f6f9; padding: 30px; }
+    .nav button { margin: 10px; padding: 10px 20px; }
+    .content { margin-top: 30px; background: white; border-radius: 10px; padding: 20px; box-shadow: 0 0 10px #ccc; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h2>My Vue.js Single Page App</h2>
+
+    <div class="nav">
+      <button @click="page='home'">Home</button>
+      <button @click="page='about'">About</button>
+      <button @click="page='contact'">Contact</button>
+    </div>
+
+    <div class="content">
+      <div v-if="page === 'home'">
+        <h3>🏠 Home</h3>
+        <p>Welcome to our simple Vue.js SPA hosted on GitHub!</p>
+      </div>
+
+      <div v-if="page === 'about'">
+        <h3>ℹ️ About</h3>
+        <p>This app runs entirely from GitHub Pages using Vue 3 CDN.</p>
+      </div>
+
+      <div v-if="page === 'contact'">
+        <h3>📞 Contact</h3>
+        <p>Email: demo@example.com</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
